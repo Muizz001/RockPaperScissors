@@ -1,0 +1,141 @@
+body{
+  background-color: grey;
+  font-family: cursive;
+  color: black;
+
+}
+body ::after ::before{
+  box-sizing: border-box;
+}
+.selection{
+  background-color: grey;
+  background-size: auto;
+  width: 150px;
+  height: 150px;
+  border: 0px;
+  margin-top: 50px;
+  transition: 100ms;
+
+}
+.selection:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.rock{
+  background-image: url(rock.png);
+  background-size: 150px;
+}
+
+.paper{
+  background-image: url(paper.png);
+  background-size: 150px;
+  margin-left: 20px;
+}
+.scissors{
+  background-image: url(scissors.png);
+  background-size: 150px 145px;
+  height: 146px;
+  margin-left: 20px;
+}
+
+.selections{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.results-flex-container{
+  display: flex;
+  justify-content: center;
+}
+.results{
+  position: absolute;
+  top: 250px;
+  display: flex;
+  align-content: center;
+
+}
+.you{
+  margin-right: 80px;
+  margin-left: 20px;
+}
+.computer{
+  margin-left: 100px;
+}
+.game-results{
+  position: absolute;
+  top: 30px;
+  display: flex;
+  align-content: center;
+
+}
+.gm{
+  width: 75px;
+  height: 65px;
+
+
+}
+.you-score{
+  margin-right: 160px;
+  background-image: url(scissors.png);
+  background-size: 75px;
+  opacity: .5;
+  margin-top: 30px;
+
+}
+.computer-score{
+  background-image: url(rock.png);
+  background-size: 75px;
+  transform: scale();
+  opacity: .5;
+  margin-top: 30px;
+
+}
+.who-won{
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: cursive;
+  text-align: center;
+
+}
+@media screen and (max-width:500px) {
+  .selections{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .results-flex-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 400px;
+  }
+  .you{
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .computer{
+    margin-left: 0px;
+  }
+  
+  .results{
+    position: inherit;
+    display: block;
+    top: 0;
+
+
+  }
+  .you-score{
+    margin-top: 30px;
+    margin-right: 0;
+  }
+  .computer-score{
+    margin-top: 30px;
+
+  }
+  .who-won{
+    font-size: 1rem;
+  }
+}
